@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Script Tag</title>
+
+    <script>
+        function myFunc(){
+            document.getElementById("demo2").innerHTML="Script tag inside head";
+        }
+    </script>
+
+</head>
+<body>
+    <h2>  Script tag inside Body </h2>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById('demo1').innerHTML="Script tag inside Body";
+    </script>
+
+    <p id="demo2"></p>
+    <button type="button" onclick="myFunc()">
+        Head Script
+    </button>
+</body>
+</html>
