@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+<p id="demo1"></p>
+
+<script>
+    var x, y, z;  // Statement 1
+    x = 5;        // Statement 2
+    y = 6;        // Statement 3
+    z = x + y;    // Statement 4
+
+    document.getElementById("demo1").innerHTML = "Z is : "+z;
+</script>
+
+<p id="demo2"></p>
+<script>
+    document.getElementById("demo2").innerHTML = "Hello Dolly.";
+</script>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+    function myFunction() {
+        document.getElementById("demo3").innerHTML = "Hello Dolly!";
+        document.getElementById("demo4").innerHTML = "How are you?";
+    }
+</script>
+
+</body>
+</html>
