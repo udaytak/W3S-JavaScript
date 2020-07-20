@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+    <p id="demo1"></p>
+    <script>
+        var x = 16 + 4 + "Volvo";
+        document.getElementById("demo1").innerHTML = x;
+    </script>
+
+    <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+    <p id="demo2"></p>
+    <script>
+        var x = "Volvo" + 16 + 4;
+        document.getElementById("demo2").innerHTML = x;
+    </script>
+
+    <p>JavaScript has dynamic types. This means that the same variable can be used to hold different data types:</p>
+    <p id="demo3"></p>
+    <script>
+        var x;         // Now x is undefined
+        x = 5;         // Now x is a Number
+        x = "John";      // Now x is a String
+        document.getElementById("demo3").innerHTML = x;
+    </script>
+
+    <p>Numbers can be written with, or without decimals:</p>
+    <p id="demo4"></p>
+    <script>
+        var x1 = 34.00;
+        var x2 = 34;
+        var x3 = 3.14;
+        document.getElementById("demo4").innerHTML =
+        x1 + "<br>" + x2 + "<br>" + x3;
+    </script>
+
+    <p>Extra large or extra small numbers can be written with scientific (exponential) notation:</p>
+    <p id="demo5"></p>
+    <script>
+        var y = 123e5;
+        var z = 123e-5;
+        document.getElementById("demo5").innerHTML = y + "<br>" + z;
+    </script>
+
+    <p id="demo6"></p>
+
+    <script>
+        var x = 5;
+        var y = 5;
+        var z = 6;
+        document.getElementById("demo6").innerHTML = (x == y) + "<br>" + (x == z);
+    </script>
+
+    <p>Array indexes are zero-based, which means the first item is [0].</p>
+    <p id="demo7"></p>
+    <script>
+        var cars = ["Saab","Volvo","BMW"];
+        document.getElementById("demo7").innerHTML = cars[0];
+    </script>
+
+    <p>JavaScript Objects</p>
+    <p id="demo8"></p>
+    <script>
+        var person = {
+        firstName : "John",
+        lastName  : "Doe",
+        age     : 50,
+        eyeColor  : "blue"
+        };
+        document.getElementById("demo8").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+    </script>
+
+    <p>The typeof operator returns the type of a variable or an expression.<br>String</p>
+    <p id="demo9"></p>
+    <script>
+        document.getElementById("demo9").innerHTML = 
+        typeof "" + "<br>" +
+        typeof "John" + "<br>" + 
+        typeof "John Doe";
+    </script>
+
+    <p>The typeof operator returns the type of a variable or an expression.<br>number</p>
+    <p id="demo10"></p>
+    <script>
+        document.getElementById("demo10").innerHTML = 
+        typeof 0 + "<br>" + 
+        typeof 314 + "<br>" +
+        typeof 3.14 + "<br>" +
+        typeof (3) + "<br>" +
+        typeof (3 + 4);
+    </script>
+
+    <p>The value (and the data type) of a variable with no value is <b>undefined</b>.</p>
+    <p id="demo11"></p>
+    <script>
+        var car;
+        document.getElementById("demo11").innerHTML = car + "<br>" + typeof car;
+    </script>
+
+    <p>An empty string has both a legal value and a type:</p>
+    <p>String</p>
+
+    <p id="demo12"></p>
+
+    <script>
+        var car = ""; 
+        document.getElementById("demo12").innerHTML =
+        "The value is: " + car + "<br>" + "The type is: " + typeof car;
+    </script>
+
+    <p>Objects can be emptied by setting the value to <b>null</b>.</p>
+    <p id="demo13"></p>
+    <script>
+        var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+        person = null;
+        document.getElementById("demo13").innerHTML = typeof person;
+    </script>
+
+    <p>Objects can be emptied by setting the value to <b>undefined</b>.</p>
+    <p id="demo"></p>
+    <script>
+        var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+        person = undefined;
+        document.getElementById("demo").innerHTML = person;
+    </script>
+
+    <p>Undefined and null are equal in value but different in type:</p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML =
+        typeof undefined + "<br>" +
+        typeof null + "<br><br> (null === undefined)" +
+        (null === undefined) + "<br> (null == undefined)" +
+        (null == undefined);
+    </script>
+
+    <p>The typeof operator returns the type of a variable or an expression.</p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = 
+        typeof "john" + "<br>" + 
+        typeof 3.14 + "<br>" +
+        typeof true + "<br>" +
+        typeof false + "<br>" +
+        typeof x;
+    </script>
+
+    <p>The typeof operator returns object for both objects, arrays, and null.</p>
+    <p>The typeof operator does not return object for functions.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = 
+        typeof {name:'john', age:34} + "<br>" +     //object
+        typeof [1,2,3,4] + "<br>" +     //object
+        typeof null + "<br>" +  //object
+        typeof function myFunc(){}; //function
+    </script>
+
+
+</body>
+</html>
