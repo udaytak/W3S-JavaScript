@@ -135,7 +135,7 @@ document.getElementById("demo7").innerHTML = pos;
 <p id="demo16">Please visit Microsoft!</p>
 <script>
 function myFunction() {
-  var str = document.getElementById("demo").innerHTML; 
+  var str = document.getElementById("demo16").innerHTML; 
   var txt = str.replace("Microsoft","W3Schools");
   document.getElementById("demo16").innerHTML = txt;
 }
@@ -146,7 +146,7 @@ function myFunction() {
 <p id="demo17">Please visit Microsoft and Microsoft!</p>
 <script>
 function myFunction() {
-  var str = document.getElementById("demo").innerHTML; 
+  var str = document.getElementById("demo17").innerHTML; 
   var txt = str.replace("Microsoft","W3Schools");
   document.getElementById("demo17").innerHTML = txt;
 }
@@ -157,25 +157,142 @@ function myFunction() {
 <p id="demo18">Please visit Microsoft!</p>
 <script>
 function myFunction() {
-  var str = document.getElementById("demo").innerHTML; 
+  var str = document.getElementById("demo18").innerHTML; 
   var txt = str.replace("MICROSOFT","W3Schools");
   document.getElementById("demo18").innerHTML = txt;
 }
 </script>
+
 <p><strong>Note:</strong> Nothing will happen. By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work.</p>
-
-<h2>JavaScript String Methods</h2>
-
 <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
-
 <button onclick="myFunction()">Try it</button>
-<p id="demo">Please visit Microsoft!</p>
+<p id="demo19">Please visit Microsoft!</p>
 <script>
 function myFunction() {
-  var str = document.getElementById("demo").innerHTML; 
+  var str = document.getElementById("demo19").innerHTML; 
   var txt = str.replace(/MICROSOFT/i,"W3Schools");
-  document.getElementById("demo").innerHTML = txt;
+  document.getElementById("demo19").innerHTML = txt;
 }
+</script>
+
+<p>Replace all occurrences of "Microsoft" with "W3Schools" in the paragraph below:</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo20">Please visit Microsoft and Microsoft!</p>
+<script>
+function myFunction() {
+  var str = document.getElementById("demo20").innerHTML; 
+  var txt = str.replace(/Microsoft/g,"W3Schools");
+  document.getElementById("demo20").innerHTML = txt;
+}
+</script>
+
+<p>Convert string to upper case:</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo21">Hello World!</p>
+<script>
+function myFunction() {
+  var text = document.getElementById("demo21").innerHTML;
+  document.getElementById("demo21").innerHTML = text.toUpperCase();
+}
+</script>
+
+<p>Convert string to lower case:</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo22">Hello World!</p>
+<script>
+function myFunction() {
+  var text = document.getElementById("demo22").innerHTML;
+  document.getElementById("demo22").innerHTML = text.toLowerCase();
+}
+</script>
+
+<p>The concat() method joins two or more strings:</p>
+<p id="demo23"></p>
+<script>
+var text1 = "Hello";
+var text2 = "World!";
+var text3 = text1.concat(" ",text2);
+document.getElementById("demo23").innerHTML = text3;
+</script>
+
+<p>Click the button to alert the string with removed whitespace.</p>
+<button onclick="myFunction()">Try it</button>
+<p><strong>Note:</strong> The trim() method is not supported in Internet Explorer 8 and earlier versions.</p>
+<script>
+function myFunction() {
+  var str = "     Hello World!     ";
+  alert(str.trim());
+}
+</script>
+
+<p>IE 8 does not support String.trim(). To trim a string you can use a regular expression instead.</p>
+<script>
+var str = "     Hello World!     ";
+alert(str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ''));
+</script>
+
+<p>IE 8 does not support String.trim(). To trim a string you can use a polyfill.</p>
+<script>
+if (!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+  };
+}
+var str = "     Hello World!    ";
+alert(str.trim());
+</script>
+
+<p>The charAt() method returns the character at a given position in a string:</p>
+<p id="demo24"></p>
+<script>
+var str = "HELLO WORLD";
+document.getElementById("demo24").innerHTML = str.charAt(0);
+</script>
+
+<p>The charCodeAt() method returns the unicode of the character at a given position in a string:</p>
+<p id="demo25"></p>
+<script>
+var str = "HELLO WORLD";
+document.getElementById("demo25").innerHTML = str.charCodeAt(0);
+</script>
+
+<p>ECMAScript 5 allows property access on strings:</p>
+<p id="demo26"></p>
+<script>
+var str = "HELLO WORLD";
+document.getElementById("demo26").innerHTML = str[0];
+</script>
+
+<p>ECMAScript 5 allows property acces on strings. but read only:</p>
+<p id="demo27"></p>
+<script>
+var str = "HELLO WORLD";
+str[0] = "A";  // Does not work
+document.getElementById("demo27").innerHTML = str[0];
+</script>
+
+<p>Click "Try it" to display the first array element, after a string split.</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo28"></p>
+<script>
+function myFunction() {
+  var str = "a,b,c,d,e,f";
+  var arr = str.split(",");
+  document.getElementById("demo28").innerHTML = arr[0]; //a
+}
+</script>
+
+<p id="demo29"></p>
+<script>
+var str = "Hello";
+var arr = str.split("");
+var text = "";
+var i;
+for (i = 0; i < arr.length; i++) {
+  text += arr[i] + "<br>"
+}
+document.getElementById("demo29").innerHTML = text;
 </script>
 
 </body>
