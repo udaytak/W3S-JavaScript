@@ -10,12 +10,6 @@
     <p id="demo1"></p>
     <script>
         var cars = ["Saab", "Volvo", "BMW"];
-        cars = [
-            "Saab",
-            "Volvo",
-            "BMW"
-        ];
-
         document.getElementById("demo1").innerHTML = cars
     </script>
 
@@ -23,8 +17,64 @@
     <p id="demo2"></p>
     <script>
         var cars = new Array("Merc","Benz","Audi")
+        document.getElementById("demo2").innerHTML = cars[0]
+    </script>
 
-        document.getElementById("demo2").innerHTML = cars
+    <h2>JavaScript Arrays - updating elements by index</h2>
+    <p id="demo3"></p>
+    <script>
+        var cars = [
+            "Saab",
+            "Volvo",
+            "BMW"
+        ];
+        cars[0]='Audi';
+        car0 = cars[0];
+        document.getElementById("demo3").innerHTML = cars;
+    </script>
+
+    <h2>Arrays use numbers to access its elements.</h2>
+    <p id="demo4"></p>
+    <script>
+        var person = ["John", "Doe", 46];
+        document.getElementById("demo4").innerHTML = person[0];
+    </script>
+
+    <h2>Arrays use numbers to access its element properties.</h2>
+    <p id="demo5"></p>
+    <script>
+        var person = {firstName:"John", lastName:"Doe", age:46};
+        document.getElementById("demo5").innerHTML = person[age];
+    </script>
+
+    <h2>The length property returns the length of an array.</h2>
+    <p id="demo6"></p>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo6").innerHTML = fruits.length;
+    </script>
+
+    <h2>JavaScript array elements are accesses using numeric indexes (starting from 0).</h2>
+    <p id="demo7"></p>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var last = fruits[fruits.length-1]
+        document.getElementById("demo7").innerHTML = last;
+    </script>
+
+    <h2>The best way to loop through an array is using a standard for loop</h2>
+    <p id="demo8"></p>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var lenF = fruits.length;
+        text = "<ul>";
+
+        for (i=0; i<lenF; i++){
+            text += "<li>"+fruits[i]+"</li>"
+        }
+        text+= "</ul>";
+
+        document.getElementById("demo8").innerHTML = text;
     </script>
 
 </body>
