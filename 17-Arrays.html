@@ -44,7 +44,7 @@
     <p id="demo5"></p>
     <script>
         var person = {firstName:"John", lastName:"Doe", age:46};
-        document.getElementById("demo5").innerHTML = person[age];
+        document.getElementById("demo5").innerHTML = person[age]+" "+person[0];
     </script>
 
     <h2>The length property returns the length of an array.</h2>
@@ -68,7 +68,6 @@
         var fruits = ["Banana", "Orange", "Apple", "Mango"];
         var lenF = fruits.length;
         text = "<ul>";
-
         for (i=0; i<lenF; i++){
             text += "<li>"+fruits[i]+"</li>"
         }
@@ -77,5 +76,70 @@
         document.getElementById("demo8").innerHTML = text;
     </script>
 
+    <h2>Array.forEach() calls a function for each array element.</h2>
+
+    <p>Array.forEach() is not supported in Internet Explorer 8 or earlier.</p>
+
+    <p id="demo9"></p>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var lenF = fruits.length;
+        text = "<ul>";
+        fruits.forEach(myFunction);
+        text += "</ul>";
+        document.getElementById("demo9").innerHTML = text;
+
+        function myFunction(value){
+            text += "<li>"+value+"</li>"
+        }
+    </script>
+
+    <h2>The push method appends a new element to an array.</h2>
+    <button onclick="myFunction()">Try it</button>  
+    <p id="demo10"></p>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo10").innerHTML = fruits;
+
+        function myFunction(value){
+            fruits.push("Lemon");
+            document.getElementById("demo10").innerHTML = fruits;
+        }
+    </script>
+
+    <h2>Adding elements with high indexes can create undefined "holes" in an array.</h2>
+    <p id="demo11"></p> 
+    <script>
+        var fruits, lenF, text, i;
+        fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits[6]="Lemon";
+
+        lenF = fruits.length;
+        text = "";
+
+        for (i=0; i<lenF; i++){
+            text += fruits[i]+"<br>"
+        }
+
+        document.getElementById("demo11").innerHTML = text +" "+ fruits.length +" "+typeof fruits+" "+fruits instanceof Array;
+    </script>  
+
+    <h2>Avoid using new Array().</h2>
+    <p id="demo12"></p>
+    <script>
+        var points = new Array(40); 
+        document.getElementById("demo12").innerHTML = points[0]+" "+typeof fruits+" "+Array.isArray(fruits);  
+    </script>
+
+    <h2>This "home made" isArray() function returns true when used on an array:</h2>
+    <p id="demo13"></p>
+    <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo13").innerHTML = isArray(fruits);
+
+    function isArray(myArray) {
+        return myArray.constructor.toString().indexOf("Array") > -1;
+    }
+    </script>
 </body>
 </html>
