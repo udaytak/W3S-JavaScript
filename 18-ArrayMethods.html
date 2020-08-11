@@ -26,5 +26,52 @@
         document.getElementById("demo").innerHTML = fruits;
         document.getElementById("demo2").innerHTML = fruits.push("Grapes");
     </script>
+
+    <h2>shift()</h2>
+
+    <p>The shift() method removes the first element of an array (and "shifts" all other elements to the left):</p>
+
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo4").innerHTML = fruits;
+        fruits.shift();
+        document.getElementById("demo5").innerHTML = fruits;
+        document.getElementById("demo6").innerHTML = fruits.shift();
+    </script>
+
+    <h2>unshift()</h2>
+    <p>The unshift() method adds new elements to the beginning of an array.</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo7").innerHTML = fruits;
+
+        function myFunction() {
+            fruits.unshift("Lemon");
+            document.getElementById("demo7").innerHTML = fruits;
+            document.getElementById("demo8").innerHTML = fruits.unshift("Kiwi");
+        }
+    </script>
+
+    <h2>Array elements are accessed using their index number:</h2>
+
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo9").innerHTML = fruits;
+        fruits[0] = "Kiwi";
+        document.getElementById("demo10").innerHTML = fruits;
+    </script>
+
 </body>
 </html>
