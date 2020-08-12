@@ -75,13 +75,74 @@
 
     <h2>JavaScript Array.filter()</h2>
     <p>Creates a new array with all array elements that passes a test.</p>
-    <p id="demo"></p>
+    <p id="demo6"></p>
     <script>
         var numbers = [45, 4, 9, 16, 25];
         var over18 = numbers.filter(myFunction);
-        document.getElementById("demo").innerHTML = over18;
+        document.getElementById("demo6").innerHTML = over18;
         function myFunction(value) {
         return value > 18;
+        }
+    </script>
+
+    <h2>JavaScript Array.reduce()</h2>
+    <p>This example finds the sum of all numbers in an array:</p>
+    <p id="demo7"></p>
+    <script>
+        var numbers = [45, 4, 9, 16, 25];
+        var sum = numbers.reduce(myFunction);
+        document.getElementById("demo7").innerHTML = "The sum is " + sum;
+        function myFunction(total, value, index, array) {
+            return total + value;
+        }
+    </script>
+
+    <h2>JavaScript Array.reduce()</h2>
+    <p>This example finds the sum of all numbers in an array:</p>
+    <p id="demo8"></p>
+    <script>
+        var numbers = [45, 4, 9, 16, 25];
+        var sum = numbers.reduce(myFunction);
+        document.getElementById("demo8").innerHTML = "The sum is " + sum; /*99*/
+        function myFunction(total, value) {
+            return total + value;
+        }
+    </script>
+
+    <h2>JavaScript Array.reduce()</h2>
+    <p>This example finds the sum of all numbers in an array:</p>
+    <p id="demo9"></p>
+    <script>
+        var numbers = [45, 4, 9, 16, 25];
+        var sum = numbers.reduce(myFunction, 100);
+        document.getElementById("demo9").innerHTML = "The sum is " + sum; /*199*/
+        function myFunction(total, value) {
+        return total + value;
+        }
+    </script>
+
+    <h2>JavaScript Array.reduceRight()</h2>
+    <p>This example finds the sum of all numbers in an array:</p>
+    <p>The reduceRight() works from right-to-left in the array</p>
+    <p id="demo10"></p>
+    <script>
+        var numbers = [45, 4, 9, 16, 25];
+        var sum = numbers.reduceRight(myFunction);
+        document.getElementById("demo10").innerHTML = "The sum is " + sum;
+        function myFunction(total, value, index, array) {
+        return total + value;
+        }
+    </script>
+
+    <h2>JavaScript Array.reduceRight()</h2>
+    <p>This example finds the sum of all numbers in an array:</p>
+    <p id="demo11"></p>
+    <script>
+        var numbers = [45, 4, 9, 16, 25];
+        var sum = numbers.reduceRight(myFunction);
+        document.getElementById("demo11").innerHTML = "The sum is " + sum;
+        function myFunction(total, value) {
+        return total + value;
         }
     </script>
 
