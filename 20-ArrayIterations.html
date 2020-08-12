@@ -146,5 +146,82 @@
         }
     </script>
 
+    <h2>JavaScript Array.every()</h2>
+    <p>The every() method checks if all array values pass a test.</p>
+    <p id="demo"></p>
+
+    <script>
+        var numbers = [45, 4, 9, 16, 25];
+        var allOver18 = numbers.every(myFunction);
+        document.getElementById("demo").innerHTML = "All over 18 is " + allOver18;
+        function myFunction(value, index, array) {
+        return value > 18;
+        }
+    </script>
+
+    <h2>JavaScript Array.every()</h2>
+    <p>The every() method checks if all array values pass a test.</p>
+    <p id="demo"></p>
+    <script>
+        var numbers = [45, 4, 9, 16, 25];
+        var allOver18 = numbers.every(myFunction);
+        document.getElementById("demo").innerHTML = "All over 18 is " + allOver18;
+        function myFunction(value) {
+            return value > 18;
+        }
+    </script>
+
+    <h2>JavaScript Array.some()</h2>
+    <p>The some() method checks if some array values pass a test.</p>
+    <p id="demo"></p>
+    <script>
+        var numbers = [45, 4, 9, 16, 25];
+        var someOver18 = numbers.some(myFunction);
+        document.getElementById("demo").innerHTML = "Some over 18 is " + someOver18;
+        function myFunction(value, index, array) {
+        return value > 18;
+        }
+    </script>
+
+    <h2>JavaScript Array.indexOf()</h2>
+    <p id="demo"></p>
+    <script>
+        var fruits = ["Apple", "Orange", "Apple", "Mango"];
+        var a = fruits.indexOf("Apple");
+        document.getElementById("demo").innerHTML = "Apple is found in position " + a;
+    </script>
+    <p>The indexOf() does not work in Internet Explorer 8 and earlier versions.</p>
+
+    <h2>JavaScript Array.lastIndexOf()</h2>
+    <p id="demo"></p>
+    <script>
+        var fruits = ["Apple", "Orange", "Apple", "Mango"];
+        var a = fruits.lastIndexOf("Apple");
+        document.getElementById("demo").innerHTML = "Apple is found in position " + (a + 1);
+    </script>
+    <p>The lastIndexOf() does not work in Internet Explorer 8 and earlier versions.</p>
+
+    <h2>JavaScript Array.find()</h2>
+    <p id="demo"></p>
+    <script>
+        var numbers = [4, 9, 16, 25, 29];
+        var first = numbers.find(myFunction);
+        document.getElementById("demo").innerHTML = "First number over 18 is " + first;
+        function myFunction(value, index, array) {
+            return value > 18;
+        }
+    </script>
+
+    <h2>JavaScript Array.findIndex()</h2>
+    <p id="demo"></p>
+    <script>
+        var numbers = [4, 9, 16, 25, 29];
+        var first = numbers.findIndex(myFunction);
+        document.getElementById("demo").innerHTML = "First number over 18 has index " + first;
+        function myFunction(value, index, array) {
+        return value > 18;
+        }
+    </script>
+
 </body>
 </html>
