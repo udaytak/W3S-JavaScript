@@ -57,11 +57,63 @@
 
         /*2 Parameters to specify year, month, day*/
         var d7 = new Date(2018, 11);
-        document.getElementById("demo6").innerHTML = d7;
+        document.getElementById("demo7").innerHTML = d7;
 
         /*1 Parameter to specify year, month, day*/
         var d8 = new Date(2018);
-        document.getElementById("demo6").innerHTML = d8;
+        document.getElementById("demo8").innerHTML = d8;
     </script>
+
+    <p>Two digit years will be interpreted as 19xx:</p>
+    <p id="demo9"></p>
+    <script>
+        var d = new Date(99, 11, 24);
+        document.getElementById("demo9").innerHTML = d;
+    </script>
+
+    <p>One digit years will be interpreted as 190x:</p>
+    <p id="demo10"></p>
+    <script>
+        var d = new Date(9, 11, 24);
+        document.getElementById("demo10").innerHTML = d;
+    </script>
+
+    <h2>Date(toString)</h2>
+    <p>A Date object can be created with a specified date and time:</p>
+    <p id="demo11"></p>
+    <script>
+        var d = new Date("October 13, 2014 11:13:00");
+        document.getElementById("demo11").innerHTML = d;
+    </script>
+
+    <h2>Using milliseconds as a paramenter</h2>
+    <p>Using new Date(milliseconds), creates a new date object as January 1, 1970, 00:00:00 Universal Time (UTC) plus the milliseconds:</p>
+    <p id="demo12"></p>
+    <script>
+        var d = new Date(0);
+        document.getElementById("demo12").innerHTML = d;
+    </script>
+
+    <p>100000000000 milliseconds from Jan 1, 1970, is approximately Mar 3, 1973:</p>
+    <p id="demo13"></p>
+    <script>
+        var d = new Date(100000000000);
+        document.getElementById("demo13").innerHTML = d;
+    </script>
+
+    <p>100000000000 milliseconds from Jan 1, 1970, is approximately Oct 31, 1966:</p>
+    <p id="demo"></p>
+    <script>
+        var d = new Date(-100000000000);
+        document.getElementById("demo").innerHTML = d;
+    </script>
+
+    <p>Using new Date(milliseconds), creates a new date object as January 1, 1970, 00:00:00 Universal Time (UTC) plus the milliseconds:</p>
+    <p id="demo"></p>
+    <script>
+        var d = new Date(86400000);
+        document.getElementById("demo").innerHTML = d;
+    </script>
+    <p>One day (24 hours) is 86,400,000 milliseconds.</p>
 </body>
 </html>
