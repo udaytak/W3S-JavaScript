@@ -102,18 +102,48 @@
     </script>
 
     <p>100000000000 milliseconds from Jan 1, 1970, is approximately Oct 31, 1966:</p>
-    <p id="demo"></p>
+    <p id="demo14"></p>
     <script>
         var d = new Date(-100000000000);
-        document.getElementById("demo").innerHTML = d;
+        document.getElementById("demo14").innerHTML = d;
     </script>
 
     <p>Using new Date(milliseconds), creates a new date object as January 1, 1970, 00:00:00 Universal Time (UTC) plus the milliseconds:</p>
-    <p id="demo"></p>
+    <p id="demo15"></p>
     <script>
         var d = new Date(86400000);
-        document.getElementById("demo").innerHTML = d;
+        document.getElementById("demo15").innerHTML = d;
     </script>
     <p>One day (24 hours) is 86,400,000 milliseconds.</p>
+
+    <h2>Date methods</h2>
+    <p>The toString() method converts a date to a string:</p>
+    <p id="demo16"></p>
+    <script>
+        var d = new Date();
+        document.getElementById("demo16").innerHTML = d.toString();
+    </script>
+
+    <p>The toUTCString() method converts a date to a UTC string (a date display standard):</p>
+    <p id="demo17"></p>
+    <script>
+        var d = new Date();
+        document.getElementById("demo17").innerHTML = d.toUTCString();
+    </script>
+
+    <p>The toDateString() method converts a date to a date string:</p>
+    <p id="demo18"></p>
+    <script>
+        var d = new Date();
+        document.getElementById("demo18").innerHTML = d.toDateString();
+    </script>
+
+    <p>The toISOString() method converts a date to a date string, using the ISO standard format:</p>
+    <p id="demo19"></p>
+    <script>
+        var d = new Date();
+        document.getElementById("demo19").innerHTML = d.toISOString();
+    </script>
+
 </body>
 </html>
